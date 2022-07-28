@@ -12,7 +12,8 @@ function RecentSites() {
     const userID = user._id
 
     useEffect(() => {
-        axios.get(`http://localhost:5005/api/sites/recent/${userID}`)
+        //http://localhost:5005/api/sites/recent/${userID}
+        axios.get(`/api/sites/recent/${userID}`)
             .then(response => {
                 console.log(response)
                 setResult(response.data)

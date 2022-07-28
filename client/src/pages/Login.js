@@ -31,7 +31,9 @@ function LogIn(props) {
         // Make an axios request to the API
         // If POST request is successful redirect to login page
         // If the request resolves with an error, set the error message in the state
-        axios.post(`http://localhost:5005/api/auth/login`, requestBody)
+
+        //`http://localhost:5005/api/auth/login`
+        axios.post(`/api/auth/login`, requestBody)
             .then((response) => {
                 const token = response.data.authToken
                 // store the token

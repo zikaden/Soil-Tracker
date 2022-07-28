@@ -13,7 +13,8 @@ function NavbarSiteInfo() {
     const navigate = useNavigate();
 
     const handleDeleteClick = () => {
-        axios.delete(`http://localhost:5005/api/sites/delete/${siteID}`)
+        //http://localhost:5005/api/sites/delete/${siteID}
+        axios.delete(`/api/sites/delete/${siteID}`)
             .then((response) => {
                 navigate('/user/home');
                 console.log(response)

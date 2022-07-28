@@ -34,7 +34,8 @@ function SiteInfo() {
     const { siteID } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:5005/api/sites/${siteID}`)
+        //http://localhost:5005/api/sites/${siteID}
+        axios.get(`/api/sites/${siteID}`)
             .then(response => {
                 setSiteName(response.data.titleInformation.siteName)
                 setProjectNumber(response.data.titleInformation.projectNumber)
@@ -55,8 +56,8 @@ function SiteInfo() {
     const handleUpdateSubmit = (e) => {
 
         const requestBody = { siteName, projectNumber, profilNumber, date, operator, geolocation: { latitude, longitude }, elevation, pulpingprocess, keywords };
-
-        axios.post(`http://localhost:5005/api/sites/update/${siteID}`, requestBody)
+        //http://localhost:5005/api/sites/update/${siteID}
+        axios.post(`/api/sites/update/${siteID}`, requestBody)
             .then((response) => {
                 console.log(response)
 

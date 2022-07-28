@@ -22,8 +22,8 @@ function NavbarUser() {
 
     const handleDeleteClick = () => {
         const userID = user._id
-
-        axios.delete(`http://localhost:5005/api/auth/delete/${userID}`)
+        //http://localhost:5005/api/auth/delete/${userID}
+        axios.delete(`/api/auth/delete/${userID}`)
             .then((response) => {
                 navigate('/');
                 console.log(response)

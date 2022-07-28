@@ -12,7 +12,8 @@ function SearchSites() {
 
     const handleSearchKey = () => {
         console.log(search)
-        axios.get(`http://localhost:5005/api/sites/search/${search}`)
+        //http://localhost:5005/api/sites/search/${search}
+        axios.get(`/api/sites/search/${search}`)
             .then((response) => {
                 setResult(response.data)
             })
