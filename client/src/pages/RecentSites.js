@@ -24,7 +24,7 @@ function RecentSites() {
     return (
         <div>
             <NavbarSites />
-            <h1 class="tracking-wide text-xl pb-3 md:text-3xl md:pb-12 md:pt-18">List of Recent Sites needs to be created</h1>
+            <h1 class="pt-12 flex justify-center tracking-wide text-xl pb-3">List of Sites recently created:</h1>
             {result.map((data, i) => (
                 <Link to={`/user/site/info/${data._id}`} key={i} class="flex items-center justify-between flex-wrap bg-teal-500 border-2 border-white p-6">
                     <div class="justify-between flex-shrink-0 text-white mr-6">
