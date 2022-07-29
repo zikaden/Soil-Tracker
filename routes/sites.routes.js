@@ -43,7 +43,7 @@ router.get("/recent/:userID", (req, res) => {
     const { userID } = req.params
     Sites.find({ user: userID })
         .sort({ 'titleInformation.date': -1 })
-        .limit(1)
+        .limit(10)
         .then((response) => res.json(response))
         .catch((err) => res.json(err));
 });
